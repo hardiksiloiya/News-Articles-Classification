@@ -8,7 +8,7 @@ Import main.py into your program to get access to the main driver function. <br/
   pip install -U torch==1.5 torchvision==0.6 -f https://download.pytorch.org/whl/cu101/torch_stable.html <br/>
   pip install cython pyyaml==5.1  <br/>
   pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'  <br/>
-  pip install detectron2==0.1.3 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.5/index.html &> /dev/null  <br/>
+  pip install detectron2==0.1.3 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.5/index.html  <br/>
   sudo apt install tesseract-ocr  <br/>
   pip install pytesseract   <br/>
   pip install datefinder  <br/>
