@@ -43,7 +43,12 @@ sys.path.insert(0,'/usr/lib/chromium-browser/chromedriver')              #adding
 from difflib import SequenceMatcher
 import re
 
-
+from utils.dates import get_dates
+from utils.getlinks import get_links
+from utils.getpredictor import get_predictor
+from utils.screenshots import get_screenshots
+from utils.visualizer import visualize
+from optimizations.optimizations import suppress_multiple,merge_close
 def main_func(keys,links=None):
     '''
     The main driver function
