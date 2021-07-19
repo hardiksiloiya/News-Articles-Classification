@@ -1,5 +1,5 @@
 # News-Articles-Classification
-Currently on supported for Linux based systems. <br/>
+Currently only supported for Linux based systems. <br/>
 Install all the required pip modules by running the commands below in the terminal. <br/>
 Clone the repository. <br/>
 Import main.py into your program to get access to the main driver function. <br/>
