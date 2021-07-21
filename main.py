@@ -137,3 +137,32 @@ def accuracy(predicted,test):
         h_sim.append(SequenceMatcher(None,a=predicted[i][1],b=test[i][0]).ratio())
         b_sim.append(SequenceMatcher(None,a=predicted[i][2],b=test[i][1]).ratio())
     return h_sim,b_sim
+
+
+
+def call(keywords):
+    '''
+    Call the main function with keywords and save the outputs for each link as a textfile. 
+    Each link has 4 textfiles corresponding to it with the names being ID_link,ID_headline,ID_body,ID_date.
+    Saves the files in the root directory.
+    '''
+    i=0
+    results=main_func(keywords)
+    for result in results:
+        l=result[0]
+        head=result[1]
+        body=result[2]
+        date=result[3]
+        f=open('{}_link.txt'.format(i),'w')
+        f.writelines(l)
+        f.close()
+        f=open('{}_headline.txt'.format(i),'w')
+        f.writelines(head)
+        f.close()
+        f=open('{}_body.txt'.format(i),'w')
+        f.writelines(body)
+        f.close()
+        f=open('{}_date.txt'.format(i),'w')
+        f.writelines(date)
+        f.close()
+        i=i+1
