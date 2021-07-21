@@ -86,8 +86,8 @@ def main_func(keys,links=None):
             temp_body=""
             temp_headline=""
             im2=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
-            (_, binary) = cv2.threshold(im2, 250, 255,cv2.THRESH_BINARY_INV)#|cv2.THRESH_OTSU)
-            (_, binary) = cv2.threshold(binary, 250, 255,cv2.THRESH_BINARY_INV|cv2.THRESH_OTSU)
+            (_, binary) = cv2.threshold(im2, 250, 255,cv2.THRESH_BINARY_INV)#|cv2.THRESH_OTSU)            
+            (_, binary) = cv2.threshold(binary, 250, 255,cv2.THRESH_BINARY_INV|cv2.THRESH_OTSU)        #binarizing the image using cv2 thresholding to get better outputs from the OCR
 
             outputs = predictor(image)
             
@@ -98,7 +98,7 @@ def main_func(keys,links=None):
             classes=temp.get_fields()['pred_classes'].cpu().numpy()
 
             for i in range(len(boxes)):
-                tempimage=binary[int(boxes[i][1]):int(boxes[i][3]),int(boxes[i][0]):int(boxes[i][2])]
+                tempimage=binary[int(boxes[i][1]):int(boxes[i][3]),int(boxes[i][0]):int(boxes[i][2])]                           #cropping the bounding box from the binary image
                 if np.shape(tempimage)[0]==0:
                     continue
                 try:
