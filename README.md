@@ -1,5 +1,5 @@
 # News-Articles-Classification
-Currently on supported for Linux based systems. <br/>
+Currently only supported for Linux based systems. <br/>
 Install all the required pip modules by running the commands below in the terminal. <br/>
 Clone the repository. <br/>
 Import main.py into your program to get access to the main driver function. <br/>
@@ -25,7 +25,8 @@ Import main.py into your program to get access to the main driver function. <br/
   pip install htmldate  <br/>
   pip install articleDateExtractor  <br/>
   pip install GoogleNews  <br/>
-
+  gdown --id 1vyC6pFCR5v56ORpNsKFzDJWTuuoiSOsZ &> /dev/null #for downloading 3200 epoch weights <br/>
+  gdown --id 1GkSa7NyEZzuhc4e2RBG-MZc9IHkfmSM_ &> /dev/null  #for downloading 2500 epoch weights <br/>
 
 # Other Info
 Google Colab link: https://colab.research.google.com/drive/1-wSQJmhbrJ1V8BJcV1I5Kcc7nRWwIICT?usp=sharing <br/> <br/>
