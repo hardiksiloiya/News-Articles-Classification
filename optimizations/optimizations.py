@@ -68,8 +68,6 @@ def merge_close(outputs):
                 newclasses.append(classes[i])
                 newlist+=[i,j]
     for i in range(len(boxes)):
-        if classes[i]==2 and boxes[i][1]<60:
-            continue
         if i not in newlist:
             finalboxes.append(boxes[i])
             finalclasses.append(classes[i])
